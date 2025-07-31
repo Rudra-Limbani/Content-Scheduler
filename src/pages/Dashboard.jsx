@@ -159,8 +159,8 @@ function Dashboard() {
   // ✅ Search Filter
   const filteredPosts = posts.filter(
     (p) =>
-      p.title.toLowerCase().includes(searchText.toLowerCase()) ||
-      p.platform.toLowerCase().includes(searchText.toLowerCase())
+      (p.title?.toLowerCase() || "").includes(searchText.toLowerCase()) ||
+      (p.platform?.toLowerCase() || "").includes(searchText.toLowerCase())
   );
 
   const cardVariants = {
