@@ -5,13 +5,14 @@ import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB8v2opCqwig-g7LOa645rNJFJaW4reEzo",
-  authDomain: "content-scheduler-saas.firebaseapp.com",
-  projectId: "content-scheduler-saas",
-  storageBucket: "content-scheduler-saas.firebasestorage.app",
-  messagingSenderId: "202488743154",
-  appId: "1:202488743154:web:ede16958f3511e4d1cbc6b",
-  measurementId: "G-E7P0KG00BP"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: "G-E7P0KG00BP"
+
 };
 const app = initializeApp(firebaseConfig);
 
